@@ -97,7 +97,7 @@ function sjs_jof_unique_app_gallery_shortcode(){
 
 function sjs_jof_unique_app_calendar_shortcode(){
 	ob_start();
-	
+
     sjs_jof_unique_app_display('https://api.uniqueschoolapp.ie/feeds/calendar?idschool=230', 'sjs-jof-unique-app-public-display_calendar');
     return ob_get_clean();
 }
@@ -105,8 +105,6 @@ function sjs_jof_unique_app_calendar_shortcode(){
 function sjs_jof_unique_app_display($api, $filename)
 {
 	$result = wp_remote_get($api);
-	
 	//echo "<pre>".print_r($result)."</pre>";
-	require_once plugin_dir_path( __FILE__ ) .  'public/partials/'.$filename.'.php';
-    
+    require_once plugin_dir_path( __FILE__ ) .  'public/partials/'.$filename.'.php';
 }

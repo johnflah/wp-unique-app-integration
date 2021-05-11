@@ -47,10 +47,6 @@ class sjs_jof_unique_app_Public {
 	 * @param      string    $sjs_jof_unique_app       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-
-	 
-
-
 	public function __construct( $sjs_jof_unique_app, $version ) {
 
 		$this->sjs_jof_unique_app = $sjs_jof_unique_app;

@@ -24,21 +24,29 @@
     $data = json_decode($result['body']);
     $albums = json_encode($data->data->albums);
 ?>
+<style>
+#myapp .container.container--fluid:before{
+  content:none;
+}
+</style>
+
 <div id="myapp">
 
-<v-app>
+<v-app id="sjs_jof_app">
     <v-main style="max-width: none">
       <v-container fluid>
         <template>
-            <template>
               <v-row>
                 <v-col
                   v-for="n in albums"
                   :key="n.id"
-                  class="d-flex child-flex"
-                  cols="4"
+                  class="d-flex child-flex xs-12 sm-12 md-6"
+                  md="4"
+                  sm="12"
+                  xs="12"
+                  cols="12"
                 >
-                  <v-card class="mx-auto d-flex flex-column" max-width="344">
+                  <v-card class="  mx-auto d-flex flex-column" max-width="344">
                     <a target="blank" :href="`https://www.uniqueschoolapp.ie/site/photos/school_id/230/album_id/${n.id}`" >
                      <v-img
                       :src="`${n.thumbnil}`"
@@ -63,7 +71,6 @@
                 </v-card>
                 </v-col>
               </v-row>
-            </template>
         </template>
       </v-container>
     </v-main>
