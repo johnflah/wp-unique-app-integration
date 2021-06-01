@@ -25,6 +25,18 @@
     $calendars = json_encode($data->data->calendar);
 ?>
 <style>
+
+#main-content .container {
+  padding-top: 0 !important;
+}
+.entry-title.main_title{
+  display: none !important;
+}
+
+div#mycalendarapp .container {
+    padding-top: 0 !important;
+}
+
 #mycalendarapp .container.container--fluid:before{
 content:none;
 }
@@ -54,7 +66,7 @@ content:none;
                     {{ $refs.calendar.title }}
                   </v-toolbar-title>
                   <v-spacer></v-spacer>
-                  <v-menu bottom right>
+                  <v-menu bottom right attach="#app">
                     <template v-slot:activator="{ on, attrs }">
                       <v-btn
                         outlined

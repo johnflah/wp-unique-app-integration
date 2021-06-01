@@ -25,6 +25,12 @@
     $albums = json_encode($data->data->albums);
 ?>
 <style>
+
+.entry-title.main_title{
+  display: none !important;
+}
+
+
 #myapp .container.container--fluid:before{
   content:none;
 }
@@ -62,12 +68,7 @@
                       </a>
                     </v-card-text>
                    <v-spacer></v-spacer>
-                    <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn icon >
-                                <v-icon>mdi-share-variant</v-icon>
-                            </v-btn>  
-                    </v-card-actions>
+                    
                 </v-card>
                 </v-col>
               </v-row>
